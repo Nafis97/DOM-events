@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exploring DOM</h1>
+    </header>
+    <main>
+        <section>
+            <h3>Let's get started</h3>
+            <p id="first">My First Paragraph</p>
+            <p>This is my Second Paragrapgh</p>
+        </section>
+        <section>
+            <h3>Let's learn something new</h3>
+            <article class="special">
+                <h3>article-1</h3>
+                <p class="author description">author-1Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minima saepe iure ducimus, quos neque est sit dignissimos temporibus quidem pariatur! Iure possimus, atque voluptatibus culpa eaque doloribus? Sint, obcaecati?</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author description">author-2Maxime neque in inventore, voluptas ut rerum amet tempore distinctio repudiandae, qui dolores dolore magnam? Itaque incidunt, dolores voluptatibus quaerat dolore animi! Nemo reprehenderit exercitationem qui, similique minima cupiditate nihil.</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author description">author-3Sit accusamus deleniti exercitationem reiciendis nemo nam animi dolor, ut, quia esse incidunt autem tempore accusantium. Nesciunt, odio tenetur placeat quisquam voluptatem incidunt quos, possimus ut alias quod, voluptatum reprehenderit?</p>
+            </article>
+        </section>
+
+
+
+    </main>
+    <script>
+        // console.log(document.body);
+       // document.getElementsByTagName('p')
+      //document.getElementsByTagName('h3')
+      //document.getElementById('first').style.color='red'
+      var first = document.getElementById('first');
+      first.style.color= 'green';
+      first.style.backgroundColor ='yellow';
+      first.style.fontSize = '45px';
+      //var authors = document.getElementsByClassName('author');
+      var authors = document.querySelectorAll('.special h3');
+      //console.log(authors)
+      for (var i=0; i <authors.length; i++){
+        var element = authors[i];
+        //console.log(element);
+        //console.log(element.innerHTML);
+        element.innerHTML = 'Lekhok-'+ i;
+        element.style.backgroundColor = 'lightblue';
+        element.style.margin = '10px';
+        //document.querySelector('.special h3')
+        //document.querySelector('h3').setAttribute('title', 'You are the title')
+      }
+    </script>
+
+</body>
+</html>
